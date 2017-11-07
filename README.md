@@ -37,6 +37,8 @@ The (0,0) coordinate is at the top left corner of the grid. The game’s grid is
 
 Hexagonal Grids
 
+![Alt text](https://ianannasetech.files.wordpress.com/2017/04/screen-shot-2017-04-24-at-4-19-26-pm.png)
+
 Collisions
 If a ship attempts to leave the map, it is stopped and its speed is set to 0.
 Collisions between ships are computed during the movement phase. If a moving ship’s front were to collide with another ship, its movement is cancelled and its speed is set to 0. Every time a movement is cancelled, collisions are checked again using the new positions.
