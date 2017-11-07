@@ -20,9 +20,9 @@ A ship can fire a cannon ball with the FIRE x y command where x and y are the gr
 
 Note: when using a command such as MINE, FIRE and WAIT, the ship will still be moving with the same direction and speed as last turn.
 
-Game turns:
+# Game turns:
 
-One game turn is computed as follows:
+# One game turn is computed as follows:
 
 The amount of rum each ship is carrying is decreased by 1 unit.
 The players’ commands are applied (spawning of cannon balls, mines and ship movement).
@@ -32,20 +32,20 @@ Damage from cannon balls is computed.
 Elimination of ships with no more rum.
 If at any point during its movement a ship shares a cell with a barrel of rum, the ship collects that rum. In the same way, if a ship touches a mine, that mine explodes and the loss of rum is applied immediately.
 
-The grid:
+# The grid:
 The (0,0) coordinate is at the top left corner of the grid. The game’s grid is made up of hexagonal cells in which odd lines are slightly shifted compared to a normal grid. Since a hexagon has 6 sides, each cell had 6 neighbors (except cells on the edges of the map).
 
-Hexagonal Grids
+# Hexagonal Grids
 
 ![Alt text](https://ianannasetech.files.wordpress.com/2017/04/screen-shot-2017-04-24-at-4-19-26-pm.png)
 
-Collisions
+# Collisions
 If a ship attempts to leave the map, it is stopped and its speed is set to 0.
 Collisions between ships are computed during the movement phase. If a moving ship’s front were to collide with another ship, its movement is cancelled and its speed is set to 0. Every time a movement is cancelled, collisions are checked again using the new positions.
 For ships with a speed of 2, there are two stages in the movement phase. The first stage concerns all ships with speed ≥ 1, and the second concerns only ships with speed = 2). The collision check is performed at the end of each stage.
 At the end of the ships’ rotation phase, collision are checked again. Ships whose rotation would bring about a collision will have their rotation cancelled and their speed set to 0. Collisions are rechecked each time a rotation is cancelled.
 
-Manual steering of a ship:
+# Manual steering of a ship:
 
 Starting at Bronze league, you can control the actions of your ship manually with the following commands: FASTER, SLOWER, PORT, STARBOARD.
 
